@@ -2,10 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Button from './assets/componets/ButtonComponent'
+import Immagine from './assets/componets/ImageComponent'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <div>
@@ -17,14 +17,18 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <Button content="Salva" color="green" />
+      <Button content="Elimina" color="red" />
+      <Button content="Modifica" color="blue" />
+
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
+      <Immagine src="https://placecats.com/bella/300/200" alt="placecat" />
+      <Immagine src="https://placebear.com/300/200" alt="placebear" />
+      <Immagine src="https://place.dog/300/200" alt="placedog" />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
